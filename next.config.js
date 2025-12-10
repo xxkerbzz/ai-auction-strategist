@@ -1,20 +1,20 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Ensure content directory is included in serverless function bundles
   // This is critical for Vercel deployments where files need to be explicitly included
   experimental: {
     outputFileTracingIncludes: {
+      // Use absolute paths from project root
       '/resources/[...slug]': [
-        './SEO Strategy/content/**/*',
-        './SEO Strategy/**/*',
+        path.join(process.cwd(), 'SEO Strategy', 'content', '**', '*'),
       ],
       '/resources': [
-        './SEO Strategy/content/**/*',
-        './SEO Strategy/**/*',
+        path.join(process.cwd(), 'SEO Strategy', 'content', '**', '*'),
       ],
       '/sitemap.xml': [
-        './SEO Strategy/content/**/*',
-        './SEO Strategy/**/*',
+        path.join(process.cwd(), 'SEO Strategy', 'content', '**', '*'),
       ],
     },
   },

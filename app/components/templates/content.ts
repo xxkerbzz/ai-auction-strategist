@@ -105,6 +105,20 @@ function getContentDirectory(): string {
     return fallbackPath;
   }
   
+  // Special handling for Vercel: check if files are in /var/task directly
+  // Sometimes Vercel includes files at the root of /var/task
+  if (process.cwd() === '/var/task') {
+    const vercelPath = path.join('/var/task', config.contentDirectory);
+    if (fs.existsSync(vercelPath)) {
+      return vercelPath;
+    }
+    // Also try without the space (in case of encoding issues)
+    const vercelPathNoSpace = path.join('/var/task', config.contentDirectory.replace(' ', '%20'));
+    if (fs.existsSync(vercelPathNoSpace)) {
+      return vercelPathNoSpace;
+    }
+  }
+  
   // Log error with all attempted paths
   console.error(`[getContentDirectory] Content directory not found!`);
   console.error(`[getContentDirectory] Config contentDirectory: ${config.contentDirectory}`);

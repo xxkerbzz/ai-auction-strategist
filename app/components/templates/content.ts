@@ -16,20 +16,43 @@ function getContentDirectory(): string {
   }
   
   // Find project root by looking for package.json
-  let currentPath = process.cwd();
-  let projectRoot = currentPath;
+  // Try multiple strategies for different build environments
+  let projectRoot: string | null = null;
   
-  // In Vercel, process.cwd() might be /var or a build directory
+  // Strategy 1: Check if process.cwd() is already the project root
+  if (fs.existsSync(path.join(process.cwd(), 'package.json'))) {
+    projectRoot = process.cwd();
+  }
+  
+  // Strategy 2: In Vercel, process.cwd() might be /var or a build directory
   // Search upward for package.json to find the actual project root
-  for (let i = 0; i < 10; i++) {
-    const packageJsonPath = path.join(currentPath, 'package.json');
-    if (fs.existsSync(packageJsonPath)) {
-      projectRoot = currentPath;
-      break;
+  if (!projectRoot) {
+    let currentPath = process.cwd();
+    for (let i = 0; i < 10; i++) {
+      const packageJsonPath = path.join(currentPath, 'package.json');
+      if (fs.existsSync(packageJsonPath)) {
+        projectRoot = currentPath;
+        break;
+      }
+      const parentPath = path.resolve(currentPath, '..');
+      if (parentPath === currentPath) break; // Reached filesystem root
+      currentPath = parentPath;
     }
-    const parentPath = path.resolve(currentPath, '..');
-    if (parentPath === currentPath) break; // Reached filesystem root
-    currentPath = parentPath;
+  }
+  
+  // Strategy 3: Try __dirname approach (if available in module context)
+  // This works when the file is imported as a module
+  if (!projectRoot && typeof __dirname !== 'undefined') {
+    // Go up from app/components/templates/content.ts to project root
+    const possibleRoot = path.resolve(__dirname, '../../..');
+    if (fs.existsSync(path.join(possibleRoot, 'package.json'))) {
+      projectRoot = possibleRoot;
+    }
+  }
+  
+  // Fallback to process.cwd() if nothing found
+  if (!projectRoot) {
+    projectRoot = process.cwd();
   }
   
   // Try the found project root

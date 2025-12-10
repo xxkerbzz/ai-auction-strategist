@@ -1,4 +1,4 @@
-import { getAllContentSlugs } from './content';
+import { getAllContentSlugs } from '../components/templates/content';
 
 export interface SitemapUrl {
   loc: string;

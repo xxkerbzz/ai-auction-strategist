@@ -164,7 +164,7 @@ export async function getContentBySlug(slugArray: string[]): Promise<ContentData
         // Custom pattern: replace {parent}, {subtopic}, and {slug}
         const blogFolder = siteConfig.customFolderPatterns?.blog || 'posts';
         const pattern = siteConfig.customFolderPatterns?.cluster || '{parent}/{subtopic}';
-        const folderPath = pattern.replace('{parent}', silo).replace('{subtopic}`, subtopic);
+        const folderPath = pattern.replace('{parent}', silo).replace('{subtopic}', subtopic);
         filePath = path.join(CONTENT_DIR, folderPath, blogFolder, `${post}.md`);
       }
     } else {

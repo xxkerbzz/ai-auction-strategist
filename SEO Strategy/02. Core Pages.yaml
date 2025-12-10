@@ -1,0 +1,273 @@
+# Core Pages Structure
+# 
+# ├── Home
+# ├── Product
+# ├── Features
+# ├── Pricing
+# ├── About
+# ├── Contact
+# ├── FAQ
+# ├── Integrations
+# ├── Privacy Policy
+# └── Terms of Service
+
+---
+
+core_pages:
+  - url: /
+    title: BidSmart - Stop Bidding Blind. Know What It's Really Worth.
+    h1: Stop Bidding Blind. Know What It's Really Worth.
+    purpose: Homepage with hero, value proposition, features overview, social proof, CTA
+    business_goal: Convert visitors to free trial or paid subscription
+    target_audience: Casual collectors and professional resellers frustrated by blind bidding
+    primary_keyword: auction price prediction
+    content_outline:
+      h2s:
+        - Stop Bidding Blind. Know What It's Really Worth.
+        - How BidSmart Transforms Auction Bidding
+        - Instant Price Predictions with Confidence Intervals
+        - Custom Bidding Strategies That Win
+        - Trusted by Collectors and Resellers
+        - Get Started Today
+    key_messaging:
+      - "Stop bidding blind—know exactly what items are worth before placing bids"
+      - "Instant price predictions with confidence intervals based on thousands of completed auctions"
+      - "Custom bidding strategies with specific timing recommendations"
+      - "Cross-platform intelligence across eBay, Heritage Auctions, LiveAuctioneers, and more"
+    cta_strategy: Primary CTA: "Start Free Trial", Secondary: "View Pricing"
+    schema_type: Organization, WebSite
+
+  - url: /product
+    title: BidSmart Product - AI Auction Intelligence Platform
+    h1: How BidSmart Works
+    purpose: Product overview, how it works, analysis process
+    business_goal: Educate prospects on product capabilities and build trust
+    target_audience: Collectors and resellers evaluating auction intelligence tools
+    primary_keyword: auction intelligence platform
+    content_outline:
+      h2s:
+        - Upload a Photo or Paste a Listing Link
+        - Instant Price Prediction Analysis
+        - Comparable Sales Data and Market Insights
+        - Custom Bidding Strategy Recommendations
+        - Multi-Platform Auction Intelligence
+        - Professional Tools for Resellers
+    key_messaging:
+      - "Analyzes thousands of completed auctions to predict prices"
+      - "Provides actionable bidding strategies with specific timing recommendations"
+      - "Works across eBay, Heritage Auctions, LiveAuctioneers, and other major platforms"
+    cta_strategy: "Start Your Free Trial"
+    schema_type: SoftwareApplication
+
+  - url: /features
+    title: BidSmart Features - Complete Auction Intelligence
+    h1: Complete Auction Intelligence for Collectors and Resellers
+    purpose: Detailed feature breakdown with benefits
+    business_goal: Showcase comprehensive feature set and competitive advantages
+    target_audience: Collectors and resellers comparing auction tools
+    primary_keyword: auction intelligence features
+    content_outline:
+      h2s:
+        - Instant Price Predictions
+        - Confidence Intervals and Market Analysis
+        - Comparable Sales Research
+        - Custom Bidding Strategies
+        - Multi-Platform Support
+        - Bulk Analysis for Resellers
+        - Inventory Management
+        - Profit Margin Tracking
+        - Tax Reporting Tools
+        - Underpriced Item Alerts
+    key_messaging:
+      - "Every feature designed to eliminate guesswork in auction bidding"
+      - "Proactive intelligence, not reactive data dumps"
+      - "Professional tools for serious resellers"
+    cta_strategy: "See Pricing Plans"
+    schema_type: SoftwareApplication
+
+  - url: /pricing
+    title: BidSmart Pricing - Auction Intelligence Starting at $29/month
+    h1: Simple, Transparent Pricing
+    purpose: Pricing tiers, feature comparison, FAQ
+    business_goal: Convert visitors to paid subscription
+    target_audience: Collectors and resellers ready to purchase
+    primary_keyword: auction intelligence pricing
+    content_outline:
+      h2s:
+        - Choose Your Plan
+        - All Plans Include
+        - Frequently Asked Questions About Pricing
+        - Start Making Smarter Bids Today
+    key_messaging:
+      - "$29/month for casual collectors, $99/month for professional resellers"
+      - "Free trial available, cancel anytime"
+      - "White-label solutions for auction houses available"
+    cta_strategy: "Start Free Trial" on each plan
+    schema_type: Offer
+
+  - url: /about
+    title: About BidSmart - Our Mission to Transform Auction Bidding
+    h1: About BidSmart
+    purpose: Company story, mission, team, why we built this
+    business_goal: Build trust and credibility with collectors and resellers
+    target_audience: Users wanting to understand the company behind the product
+    primary_keyword: about bidsmart
+    content_outline:
+      h2s:
+        - Our Mission
+        - Why We Built BidSmart
+        - Our Commitment to Data-Driven Bidding
+        - Join Thousands of Smarter Bidders
+    key_messaging:
+      - "Built by collectors and resellers, for collectors and resellers"
+      - "We understand the frustration of bidding blind and overpaying"
+      - "Our goal is to turn gut-feeling bidders into data-driven profit machines"
+    cta_strategy: "Start Your Free Trial"
+    schema_type: Organization
+
+  - url: /contact
+    title: Contact BidSmart - Get Help and Support
+    h1: Contact Us
+    purpose: Contact form, support information, office details
+    business_goal: Enable customer support and sales inquiries
+    target_audience: Existing customers and prospects with questions
+    primary_keyword: contact bidsmart
+    content_outline:
+      h2s:
+        - Get in Touch
+        - Support Hours
+        - Common Questions
+    key_messaging:
+      - "We're here to help you make smarter auction decisions"
+      - "Fast response times for all inquiries"
+    cta_strategy: Contact form submission
+    schema_type: ContactPage
+
+  - url: /faq
+    title: BidSmart FAQ - Frequently Asked Questions
+    h1: Frequently Asked Questions
+    purpose: Answer common questions about product, setup, pricing, features
+    business_goal: Reduce support burden and address objections
+    target_audience: Prospects with questions before purchasing
+    primary_keyword: bidsmart faq
+    content_outline:
+      h2s:
+        - Getting Started
+        - How It Works
+        - Pricing and Plans
+        - Features and Capabilities
+        - Platform Support
+        - Account and Billing
+    key_messaging:
+      - "Everything you need to know about BidSmart"
+      - "Still have questions? Contact us"
+    cta_strategy: "Start Your Free Trial"
+    schema_type: FAQPage
+
+  - url: /integrations
+    title: BidSmart Integrations - Supported Auction Platforms
+    h1: Supported Auction Platforms
+    purpose: List all supported auction platforms, integration details
+    business_goal: Show platform coverage and technical capabilities
+    target_audience: Users evaluating platform compatibility
+    primary_keyword: auction platform integrations
+    content_outline:
+      h2s:
+        - eBay Integration
+        - Heritage Auctions Support
+        - LiveAuctioneers Analysis
+        - Specialty Auction Houses
+        - Coming Soon Platforms
+    key_messaging:
+      - "Cross-platform intelligence across major auction sites"
+      - "More platforms added regularly"
+    cta_strategy: "Start Your Free Trial"
+    schema_type: SoftwareApplication
+
+  - url: /privacy
+    title: BidSmart Privacy Policy - How We Protect Your Data
+    h1: Privacy Policy
+    purpose: Privacy policy, data handling, user rights
+    business_goal: Legal compliance and user trust
+    target_audience: All users
+    primary_keyword: bidsmart privacy policy
+    content_outline:
+      h2s:
+        - Information We Collect
+        - How We Use Your Information
+        - Data Security
+        - Your Rights
+        - Contact Us
+    key_messaging:
+      - "We take your privacy seriously"
+      - "Your auction data is secure and confidential"
+    cta_strategy: None
+    schema_type: WebPage
+
+  - url: /terms
+    title: BidSmart Terms of Service - User Agreement
+    h1: Terms of Service
+    purpose: Terms of service, user agreement, legal terms
+    business_goal: Legal compliance
+    target_audience: All users
+    primary_keyword: bidsmart terms of service
+    content_outline:
+      h2s:
+        - Acceptance of Terms
+        - Service Description
+        - User Responsibilities
+        - Payment Terms
+        - Limitation of Liability
+        - Contact Us
+    key_messaging:
+      - "Clear terms for using BidSmart"
+    cta_strategy: None
+    schema_type: WebPage
+
+navigation:
+  header:
+    - label: Home
+      url: /
+    - label: Product
+      url: /product
+    - label: Features
+      url: /features
+    - label: Pricing
+      url: /pricing
+    - label: Resources
+      url: /resources
+      dropdown:
+        - label: Auction Price Prediction
+          url: /resources/auction-price-prediction
+        - label: Bidding Strategies
+          url: /resources/bidding-strategies
+        - label: Auction Platforms
+          url: /resources/auction-platforms
+        - label: Collecting and Reselling
+          url: /resources/collecting-and-reselling
+        - label: Auction Market Intelligence
+          url: /resources/auction-market-intelligence
+    - label: About
+      url: /about
+    - label: Contact
+      url: /contact
+  
+  footer:
+    - label: Product
+      url: /product
+    - label: Features
+      url: /features
+    - label: Pricing
+      url: /pricing
+    - label: Integrations
+      url: /integrations
+    - label: About
+      url: /about
+    - label: Contact
+      url: /contact
+    - label: FAQ
+      url: /faq
+    - label: Privacy
+      url: /privacy
+    - label: Terms
+      url: /terms

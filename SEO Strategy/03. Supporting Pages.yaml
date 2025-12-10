@@ -1,0 +1,284 @@
+# Supporting Pages Structure
+#
+# Auction Price Prediction
+# └── Price Analysis Methods
+#     └── How does auction price prediction work?
+#
+# Bidding Strategies
+# └── Timing and Sniping Techniques
+#     └── When is the best time to bid in an auction?
+#
+# Auction Platforms
+# └── eBay Auction Intelligence
+#     └── How do I use auction intelligence on eBay?
+#
+# Collecting and Reselling
+# └── Collector Profit Optimization
+#     └── How can collectors maximize profit at auctions?
+#
+# Auction Market Intelligence
+# └── Market Data Analysis
+#     └── What is auction market intelligence?
+
+---
+
+silos:
+  - silo_name: "Auction Price Prediction"
+    entity_relationships:
+      primary_entity: "auction price prediction"
+      supporting_entities:
+        - "comparable sales research"
+        - "market value assessment"
+        - "confidence intervals"
+        - "historical auction data"
+      related_entities_other_silos:
+        "Bidding Strategies": "Price predictions inform bidding strategies"
+        "Auction Market Intelligence": "Market intelligence supports price predictions"
+        "Collecting and Reselling": "Price predictions help optimize profit"
+    
+    cross_silo_linking:
+      link_to:
+        - silo: "Bidding Strategies"
+          reason: "When explaining how price predictions inform bidding decisions"
+        - silo: "Auction Market Intelligence"
+          reason: "When discussing how market data supports predictions"
+        - silo: "Collecting and Reselling"
+          reason: "When explaining how predictions help maximize profit"
+      link_from:
+        - "Bidding Strategies"
+        - "Auction Market Intelligence"
+        - "Collecting and Reselling"
+    
+    main_pillar:
+      url: /resources/auction-price-prediction
+      title: "Auction Price Prediction: Complete Guide to Accurate Valuations"
+      h1: "Auction Price Prediction: Complete Guide to Accurate Valuations"
+      meta_description: "Complete guide to auction price prediction using AI, historical data, and comparable sales to determine accurate market values before bidding."
+      primary_keyword: auction price prediction
+      word_count: 3500
+      schema_type: Article
+    
+    subtopic_pillars:
+      - url: /resources/auction-price-prediction/price-analysis-methods
+        title: "Price Analysis Methods for Auction Items: Expert Guide"
+        meta_description: "Learn proven price analysis methods for auction items, including comparable sales research, market value assessment, and confidence intervals."
+        primary_keyword: auction price analysis methods
+        word_count: 2200
+        schema_type: Article
+    
+    paa_posts:
+      defaults:
+        word_count: 1200
+        schema_type: Article, FAQPage
+      posts:
+        - title: "How does auction price prediction work?"
+          slug: how-does-auction-price-prediction-work
+          parent: price-analysis-methods
+
+  - silo_name: "Bidding Strategies"
+    entity_relationships:
+      primary_entity: "auction bidding strategies"
+      supporting_entities:
+        - "timing and sniping techniques"
+        - "maximum bid calculation"
+        - "risk management"
+        - "multi-platform bidding"
+      related_entities_other_silos:
+        "Auction Price Prediction": "Price predictions inform bidding strategies"
+        "Auction Platforms": "Platform-specific strategies vary"
+        "Collecting and Reselling": "Strategies differ for collectors vs resellers"
+    
+    cross_silo_linking:
+      link_to:
+        - silo: "Auction Price Prediction"
+          reason: "When explaining how price predictions inform bidding decisions"
+        - silo: "Auction Platforms"
+          reason: "When discussing platform-specific bidding tactics"
+        - silo: "Collecting and Reselling"
+          reason: "When explaining strategy differences for different user types"
+      link_from:
+        - "Auction Price Prediction"
+        - "Auction Platforms"
+        - "Collecting and Reselling"
+    
+    main_pillar:
+      url: /resources/bidding-strategies
+      title: "Bidding Strategies: Complete Guide to Winning at Auctions"
+      h1: "Bidding Strategies: Complete Guide to Winning at Auctions"
+      meta_description: "Complete guide to auction bidding strategies including timing techniques, maximum bid calculation, sniping tactics, and risk management."
+      primary_keyword: auction bidding strategies
+      word_count: 3500
+      schema_type: Article
+    
+    subtopic_pillars:
+      - url: /resources/bidding-strategies/timing-and-sniping-techniques
+        title: "Timing and Sniping Techniques for Auction Bidding"
+        meta_description: "Learn effective timing and sniping techniques for auction bidding, including when to bid, how to time your bids, and sniping strategies."
+        primary_keyword: auction sniping techniques
+        word_count: 2200
+        schema_type: Article
+    
+    paa_posts:
+      defaults:
+        word_count: 1200
+        schema_type: Article, FAQPage
+      posts:
+        - title: "When is the best time to bid in an auction?"
+          slug: when-is-the-best-time-to-bid-in-an-auction
+          parent: timing-and-sniping-techniques
+
+  - silo_name: "Auction Platforms"
+    entity_relationships:
+      primary_entity: "auction platforms"
+      supporting_entities:
+        - "eBay auction intelligence"
+        - "Heritage Auctions analysis"
+        - "LiveAuctioneers strategy"
+        - "specialty auction houses"
+      related_entities_other_silos:
+        "Bidding Strategies": "Strategies vary by platform"
+        "Auction Price Prediction": "Platform data informs price predictions"
+        "Auction Market Intelligence": "Platform intelligence supports market analysis"
+    
+    cross_silo_linking:
+      link_to:
+        - silo: "Bidding Strategies"
+          reason: "When explaining platform-specific bidding tactics"
+        - silo: "Auction Price Prediction"
+          reason: "When discussing how platform data informs predictions"
+        - silo: "Auction Market Intelligence"
+          reason: "When explaining cross-platform market analysis"
+      link_from:
+        - "Bidding Strategies"
+        - "Auction Price Prediction"
+        - "Auction Market Intelligence"
+    
+    main_pillar:
+      url: /resources/auction-platforms
+      title: "Auction Platforms: Complete Guide to Major Auction Sites"
+      h1: "Auction Platforms: Complete Guide to Major Auction Sites"
+      meta_description: "Complete guide to major auction platforms including eBay, Heritage Auctions, LiveAuctioneers, and specialty auction houses with platform-specific strategies."
+      primary_keyword: auction platforms
+      word_count: 3500
+      schema_type: Article
+    
+    subtopic_pillars:
+      - url: /resources/auction-platforms/ebay-auction-intelligence
+        title: "eBay Auction Intelligence: Complete Strategy Guide"
+        meta_description: "Learn how to use auction intelligence on eBay, including price prediction, bidding strategies, and market analysis for eBay auctions."
+        primary_keyword: ebay auction intelligence
+        word_count: 2200
+        schema_type: Article
+    
+    paa_posts:
+      defaults:
+        word_count: 1200
+        schema_type: Article, FAQPage
+      posts:
+        - title: "How do I use auction intelligence on eBay?"
+          slug: how-do-i-use-auction-intelligence-on-ebay
+          parent: ebay-auction-intelligence
+
+  - silo_name: "Collecting and Reselling"
+    entity_relationships:
+      primary_entity: "collecting and reselling"
+      supporting_entities:
+        - "collector profit optimization"
+        - "reseller inventory management"
+        - "profit margin tracking"
+        - "tax reporting for resellers"
+      related_entities_other_silos:
+        "Auction Price Prediction": "Price predictions help optimize profit"
+        "Bidding Strategies": "Strategies differ for collectors vs resellers"
+        "Auction Market Intelligence": "Market intelligence supports profit optimization"
+    
+    cross_silo_linking:
+      link_to:
+        - silo: "Auction Price Prediction"
+          reason: "When explaining how predictions help maximize profit"
+        - silo: "Bidding Strategies"
+          reason: "When discussing strategy differences for different user types"
+        - silo: "Auction Market Intelligence"
+          reason: "When explaining how market data supports profit optimization"
+      link_from:
+        - "Auction Price Prediction"
+        - "Bidding Strategies"
+        - "Auction Market Intelligence"
+    
+    main_pillar:
+      url: /resources/collecting-and-reselling
+      title: "Collecting and Reselling: Complete Guide to Auction Profit Optimization"
+      h1: "Collecting and Reselling: Complete Guide to Auction Profit Optimization"
+      meta_description: "Complete guide to collecting and reselling at auctions, including profit optimization, inventory management, tax reporting, and margin tracking."
+      primary_keyword: auction collecting and reselling
+      word_count: 3500
+      schema_type: Article
+    
+    subtopic_pillars:
+      - url: /resources/collecting-and-reselling/collector-profit-optimization
+        title: "Collector Profit Optimization: Maximize Returns at Auctions"
+        meta_description: "Learn how collectors can maximize profit at auctions through price prediction, strategic bidding, and market analysis."
+        primary_keyword: collector profit optimization
+        word_count: 2200
+        schema_type: Article
+    
+    paa_posts:
+      defaults:
+        word_count: 1200
+        schema_type: Article, FAQPage
+      posts:
+        - title: "How can collectors maximize profit at auctions?"
+          slug: how-can-collectors-maximize-profit-at-auctions
+          parent: collector-profit-optimization
+
+  - silo_name: "Auction Market Intelligence"
+    entity_relationships:
+      primary_entity: "auction market intelligence"
+      supporting_entities:
+        - "market data analysis"
+        - "price trend forecasting"
+        - "underpriced item detection"
+        - "auction alert systems"
+      related_entities_other_silos:
+        "Auction Price Prediction": "Market intelligence supports price predictions"
+        "Auction Platforms": "Platform intelligence supports market analysis"
+        "Collecting and Reselling": "Market intelligence supports profit optimization"
+    
+    cross_silo_linking:
+      link_to:
+        - silo: "Auction Price Prediction"
+          reason: "When discussing how market data supports predictions"
+        - silo: "Auction Platforms"
+          reason: "When explaining cross-platform market analysis"
+        - silo: "Collecting and Reselling"
+          reason: "When explaining how market data supports profit optimization"
+      link_from:
+        - "Auction Price Prediction"
+        - "Auction Platforms"
+        - "Collecting and Reselling"
+    
+    main_pillar:
+      url: /resources/auction-market-intelligence
+      title: "Auction Market Intelligence: Complete Guide to Market Analysis"
+      h1: "Auction Market Intelligence: Complete Guide to Market Analysis"
+      meta_description: "Complete guide to auction market intelligence including market data analysis, price trend forecasting, underpriced item detection, and alert systems."
+      primary_keyword: auction market intelligence
+      word_count: 3500
+      schema_type: Article
+    
+    subtopic_pillars:
+      - url: /resources/auction-market-intelligence/market-data-analysis
+        title: "Auction Market Data Analysis: Expert Guide"
+        meta_description: "Learn how to analyze auction market data to identify trends, predict prices, and find profitable opportunities."
+        primary_keyword: auction market data analysis
+        word_count: 2200
+        schema_type: Article
+    
+    paa_posts:
+      defaults:
+        word_count: 1200
+        schema_type: Article, FAQPage
+      posts:
+        - title: "What is auction market intelligence?"
+          slug: what-is-auction-market-intelligence
+          parent: market-data-analysis

@@ -84,6 +84,12 @@ const corePages: SitemapUrl[] = [
     changefreq: 'weekly',
     priority: 0.9,
   },
+  {
+    loc: `${BASE_URL}/sitemap`,
+    lastmod: CURRENT_DATE,
+    changefreq: 'monthly',
+    priority: 0.5,
+  },
 ];
 
 /**

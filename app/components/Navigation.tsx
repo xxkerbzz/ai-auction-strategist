@@ -30,6 +30,7 @@ const defaultNavItems: NavItem[] = [
     ],
   },
   { label: 'About', url: '/about' },
+  { label: 'FAQ', url: '/faq' },
   { label: 'Contact', url: '/contact' },
 ];
 

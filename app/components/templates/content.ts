@@ -23,7 +23,16 @@ function getContentDirectory(): string {
   // This is the most reliable in Next.js/Vercel environments
   try {
     if (typeof import.meta !== 'undefined' && import.meta.url) {
-      const currentFile = import.meta.url.replace('file://', '');
+      // Handle both file:// URLs and regular paths
+      let currentFile = import.meta.url;
+      if (currentFile.startsWith('file://')) {
+        // Remove file:// protocol
+        currentFile = currentFile.replace('file://', '');
+        // On Windows, might have file:///C:/path, handle that
+        if (currentFile.startsWith('/') && process.platform === 'win32') {
+          currentFile = currentFile.substring(1);
+        }
+      }
       const currentDir = path.dirname(currentFile);
       // Go up from app/components/templates/content.ts to project root (3 levels up)
       const possibleRoot = path.resolve(currentDir, '../../..');
@@ -33,6 +42,7 @@ function getContentDirectory(): string {
     }
   } catch (e) {
     // import.meta not available, try other strategies
+    console.warn('[getContentDirectory] import.meta.url strategy failed:', e);
   }
   
   // Strategy 2: Check if process.cwd() is already the project root

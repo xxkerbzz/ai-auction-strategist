@@ -35,14 +35,28 @@ function getContentDirectory(): string {
   // Try the found project root
   const testPath = path.join(projectRoot, config.contentDirectory);
   if (fs.existsSync(testPath)) {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[getContentDirectory] Found content directory at: ${testPath}`);
+    }
     return testPath;
   }
   
   // Fallback: try process.cwd() directly
   const fallbackPath = path.join(process.cwd(), config.contentDirectory);
   if (fs.existsSync(fallbackPath)) {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[getContentDirectory] Found content directory at (fallback): ${fallbackPath}`);
+    }
     return fallbackPath;
   }
+  
+  // Log error if not found
+  console.error(`[getContentDirectory] Content directory not found!`);
+  console.error(`[getContentDirectory] Config contentDirectory: ${config.contentDirectory}`);
+  console.error(`[getContentDirectory] Project root: ${projectRoot}`);
+  console.error(`[getContentDirectory] process.cwd(): ${process.cwd()}`);
+  console.error(`[getContentDirectory] Tried path: ${testPath}`);
+  console.error(`[getContentDirectory] Tried fallback: ${fallbackPath}`);
   
   // Last resort: return the expected path (will log warning if not found)
   return path.join(projectRoot, config.contentDirectory);
@@ -89,6 +103,13 @@ export async function getContentBySlug(slugArray: string[]): Promise<ContentData
     const siteConfig = getSiteConfig();
     const CONTENT_DIR = getContentDirectory();
     
+    // Log for debugging (only in development)
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[getContentBySlug] Looking for slug:`, slugArray);
+      console.log(`[getContentBySlug] Content directory:`, CONTENT_DIR);
+      console.log(`[getContentBySlug] Content directory exists:`, fs.existsSync(CONTENT_DIR));
+    }
+    
     if (slugArray.length === 1) {
       // Pillar page
       if (siteConfig.useStandardNaming) {
@@ -120,7 +141,7 @@ export async function getContentBySlug(slugArray: string[]): Promise<ContentData
         // Custom pattern: replace {parent}, {subtopic}, and {slug}
         const blogFolder = siteConfig.customFolderPatterns?.blog || 'posts';
         const pattern = siteConfig.customFolderPatterns?.cluster || '{parent}/{subtopic}';
-        const folderPath = pattern.replace('{parent}', silo).replace('{subtopic}', subtopic);
+        const folderPath = pattern.replace('{parent}', silo).replace('{subtopic}`, subtopic);
         filePath = path.join(CONTENT_DIR, folderPath, blogFolder, `${post}.md`);
       }
     } else {
@@ -128,7 +149,13 @@ export async function getContentBySlug(slugArray: string[]): Promise<ContentData
     }
 
     if (!fs.existsSync(filePath)) {
-      console.warn(`Content file not found: ${filePath}`);
+      console.error(`[getContentBySlug] Content file not found: ${filePath}`);
+      console.error(`[getContentBySlug] Content directory: ${CONTENT_DIR}`);
+      console.error(`[getContentBySlug] Content directory exists: ${fs.existsSync(CONTENT_DIR)}`);
+      if (fs.existsSync(CONTENT_DIR)) {
+        const dirContents = fs.readdirSync(CONTENT_DIR);
+        console.error(`[getContentBySlug] Content directory contents:`, dirContents);
+      }
       return null;
     }
 
@@ -152,7 +179,11 @@ export async function getContentBySlug(slugArray: string[]): Promise<ContentData
       slug: slugArray,
     };
   } catch (error) {
-    console.error('Error loading content:', error);
+    console.error('[getContentBySlug] Error loading content:', error);
+    if (error instanceof Error) {
+      console.error('[getContentBySlug] Error message:', error.message);
+      console.error('[getContentBySlug] Error stack:', error.stack);
+    }
     return null;
   }
 }

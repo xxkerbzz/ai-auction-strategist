@@ -28,23 +28,198 @@
 - [x] Dynamic route
 - [x] Resources hub
 
-### Pillars
+### Supporting Content (Hierarchical Tree Structure)
+
+#### Pillar - Auction Price Prediction
 - [x] content/Pillar - auction-price-prediction/auction-price-prediction.md
+  - Cluster - Price Analysis Methods
+    - [x] content/Pillar - auction-price-prediction/Cluster - price-analysis-methods/price-analysis-methods.md
+    - Blog
+      - [x] content/Pillar - auction-price-prediction/Cluster - price-analysis-methods/Blog/how-does-auction-price-prediction-work.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - price-analysis-methods/Blog/what-are-the-best-price-analysis-methods-for-auction-items.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - price-analysis-methods/Blog/what-tools-do-i-need-for-auction-price-analysis.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - price-analysis-methods/Blog/how-accurate-are-auction-price-predictions.md
+  - Cluster - Comparable Sales Research
+    - [ ] content/Pillar - auction-price-prediction/Cluster - comparable-sales-research/comparable-sales-research.md
+    - Blog
+      - [ ] content/Pillar - auction-price-prediction/Cluster - comparable-sales-research/Blog/how-do-i-find-comparable-sales-for-auction-items.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - comparable-sales-research/Blog/what-makes-a-sale-comparable-for-auction-price-research.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - comparable-sales-research/Blog/where-can-i-find-comparable-sales-data-for-auctions.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - comparable-sales-research/Blog/how-do-i-use-comparable-sales-to-determine-auction-value.md
+  - Cluster - Market Value Assessment
+    - [ ] content/Pillar - auction-price-prediction/Cluster - market-value-assessment/market-value-assessment.md
+    - Blog
+      - [ ] content/Pillar - auction-price-prediction/Cluster - market-value-assessment/Blog/what-is-market-value-assessment-for-auctions.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - market-value-assessment/Blog/how-do-i-assess-market-value-before-bidding-at-an-auction.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - market-value-assessment/Blog/what-is-the-difference-between-market-value-and-auction-price.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - market-value-assessment/Blog/when-should-i-trust-market-value-assessments-for-auctions.md
+  - Cluster - Confidence Intervals and Ranges
+    - [ ] content/Pillar - auction-price-prediction/Cluster - confidence-intervals-ranges/confidence-intervals-ranges.md
+    - Blog
+      - [ ] content/Pillar - auction-price-prediction/Cluster - confidence-intervals-ranges/Blog/what-are-confidence-intervals-in-auction-price-predictions.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - confidence-intervals-ranges/Blog/how-do-i-interpret-confidence-intervals-for-auction-prices.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - confidence-intervals-ranges/Blog/what-does-a-wide-confidence-interval-mean-for-auction-prices.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - confidence-intervals-ranges/Blog/should-i-bid-within-the-confidence-interval-range.md
+  - Cluster - Historical Auction Data
+    - [ ] content/Pillar - auction-price-prediction/Cluster - historical-auction-data/historical-auction-data.md
+    - Blog
+      - [ ] content/Pillar - auction-price-prediction/Cluster - historical-auction-data/Blog/how-do-i-use-historical-auction-data-to-predict-prices.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - historical-auction-data/Blog/how-far-back-should-i-look-at-historical-auction-data.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - historical-auction-data/Blog/what-historical-auction-data-is-most-important-for-price-prediction.md
+      - [ ] content/Pillar - auction-price-prediction/Cluster - historical-auction-data/Blog/how-do-i-analyze-historical-auction-trends.md
+
+#### Pillar - Bidding Strategies
 - [x] content/Pillar - bidding-strategies/bidding-strategies.md
+  - Cluster - Timing and Sniping Techniques
+    - [x] content/Pillar - bidding-strategies/Cluster - timing-and-sniping-techniques/timing-and-sniping-techniques.md
+    - Blog
+      - [x] content/Pillar - bidding-strategies/Cluster - timing-and-sniping-techniques/Blog/when-is-the-best-time-to-bid-in-an-auction.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - timing-and-sniping-techniques/Blog/what-is-auction-sniping-and-how-does-it-work.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - timing-and-sniping-techniques/Blog/how-do-i-time-my-bids-to-win-at-auctions.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - timing-and-sniping-techniques/Blog/should-i-bid-early-or-wait-until-the-end-of-an-auction.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - timing-and-sniping-techniques/Blog/what-are-the-best-sniping-techniques-for-online-auctions.md
+  - Cluster - Maximum Bid Calculation
+    - [ ] content/Pillar - bidding-strategies/Cluster - maximum-bid-calculation/maximum-bid-calculation.md
+    - Blog
+      - [ ] content/Pillar - bidding-strategies/Cluster - maximum-bid-calculation/Blog/how-do-i-calculate-my-maximum-bid-for-an-auction.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - maximum-bid-calculation/Blog/what-factors-should-i-consider-when-setting-my-maximum-bid.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - maximum-bid-calculation/Blog/how-do-price-predictions-help-determine-maximum-bid.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - maximum-bid-calculation/Blog/should-i-set-my-maximum-bid-higher-than-the-predicted-price.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - maximum-bid-calculation/Blog/what-is-the-difference-between-starting-bid-and-maximum-bid.md
+  - Cluster - Multi-Platform Bidding
+    - [ ] content/Pillar - bidding-strategies/Cluster - multi-platform-bidding/multi-platform-bidding.md
+    - Blog
+      - [ ] content/Pillar - bidding-strategies/Cluster - multi-platform-bidding/Blog/how-do-i-bid-across-multiple-auction-platforms.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - multi-platform-bidding/Blog/what-are-the-advantages-of-multi-platform-bidding.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - multi-platform-bidding/Blog/how-do-i-manage-bids-across-different-auction-sites.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - multi-platform-bidding/Blog/which-auction-platforms-should-i-use-for-multi-platform-bidding.md
+  - Cluster - Risk Management
+    - [ ] content/Pillar - bidding-strategies/Cluster - risk-management/risk-management.md
+    - Blog
+      - [ ] content/Pillar - bidding-strategies/Cluster - risk-management/Blog/how-do-i-manage-risk-when-bidding-at-auctions.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - risk-management/Blog/what-are-common-risks-when-bidding-at-auctions.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - risk-management/Blog/how-do-i-protect-my-budget-when-bidding-at-auctions.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - risk-management/Blog/what-should-i-do-if-i-overbid-at-an-auction.md
+  - Cluster - Winning Bid Tactics
+    - [ ] content/Pillar - bidding-strategies/Cluster - winning-bid-tactics/winning-bid-tactics.md
+    - Blog
+      - [ ] content/Pillar - bidding-strategies/Cluster - winning-bid-tactics/Blog/what-are-the-best-tactics-to-win-an-auction-bid.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - winning-bid-tactics/Blog/how-do-i-outbid-other-bidders-at-auctions.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - winning-bid-tactics/Blog/what-psychological-tactics-work-in-auction-bidding.md
+      - [ ] content/Pillar - bidding-strategies/Cluster - winning-bid-tactics/Blog/when-should-i-use-proxy-bidding-vs-manual-bidding.md
+
+#### Pillar - Auction Platforms
 - [x] content/Pillar - auction-platforms/auction-platforms.md
+  - Cluster - eBay Auction Intelligence
+    - [x] content/Pillar - auction-platforms/Cluster - ebay-auction-intelligence/ebay-auction-intelligence.md
+    - Blog
+      - [x] content/Pillar - auction-platforms/Cluster - ebay-auction-intelligence/Blog/how-do-i-use-auction-intelligence-on-ebay.md
+      - [ ] content/Pillar - auction-platforms/Cluster - ebay-auction-intelligence/Blog/what-is-ebay-auction-intelligence-and-how-does-it-work.md
+      - [ ] content/Pillar - auction-platforms/Cluster - ebay-auction-intelligence/Blog/how-do-i-predict-prices-for-ebay-auctions.md
+      - [ ] content/Pillar - auction-platforms/Cluster - ebay-auction-intelligence/Blog/what-are-the-best-bidding-strategies-for-ebay-auctions.md
+      - [ ] content/Pillar - auction-platforms/Cluster - ebay-auction-intelligence/Blog/how-do-i-analyze-ebay-auction-listings-effectively.md
+  - Cluster - Heritage Auctions Analysis
+    - [ ] content/Pillar - auction-platforms/Cluster - heritage-auctions-analysis/heritage-auctions-analysis.md
+    - Blog
+      - [ ] content/Pillar - auction-platforms/Cluster - heritage-auctions-analysis/Blog/how-do-i-analyze-heritage-auctions-listings.md
+      - [ ] content/Pillar - auction-platforms/Cluster - heritage-auctions-analysis/Blog/what-makes-heritage-auctions-different-from-other-platforms.md
+      - [ ] content/Pillar - auction-platforms/Cluster - heritage-auctions-analysis/Blog/how-do-i-bid-successfully-on-heritage-auctions.md
+      - [ ] content/Pillar - auction-platforms/Cluster - heritage-auctions-analysis/Blog/what-should-i-know-before-bidding-on-heritage-auctions.md
+  - Cluster - LiveAuctioneers Strategy
+    - [ ] content/Pillar - auction-platforms/Cluster - liveauctioneers-strategy/liveauctioneers-strategy.md
+    - Blog
+      - [ ] content/Pillar - auction-platforms/Cluster - liveauctioneers-strategy/Blog/what-is-the-best-strategy-for-liveauctioneers.md
+      - [ ] content/Pillar - auction-platforms/Cluster - liveauctioneers-strategy/Blog/how-does-liveauctioneers-bidding-work.md
+      - [ ] content/Pillar - auction-platforms/Cluster - liveauctioneers-strategy/Blog/what-are-the-best-tactics-for-winning-liveauctioneers-auctions.md
+      - [ ] content/Pillar - auction-platforms/Cluster - liveauctioneers-strategy/Blog/how-do-i-use-price-prediction-on-liveauctioneers.md
+  - Cluster - Specialty Auction Houses
+    - [ ] content/Pillar - auction-platforms/Cluster - specialty-auction-houses/specialty-auction-houses.md
+    - Blog
+      - [ ] content/Pillar - auction-platforms/Cluster - specialty-auction-houses/Blog/how-do-specialty-auction-houses-work.md
+      - [ ] content/Pillar - auction-platforms/Cluster - specialty-auction-houses/Blog/what-are-specialty-auction-houses-and-when-should-i-use-them.md
+      - [ ] content/Pillar - auction-platforms/Cluster - specialty-auction-houses/Blog/how-do-i-find-reputable-specialty-auction-houses.md
+      - [ ] content/Pillar - auction-platforms/Cluster - specialty-auction-houses/Blog/what-are-the-advantages-of-using-specialty-auction-houses.md
+  - Cluster - Cross-Platform Comparison
+    - [ ] content/Pillar - auction-platforms/Cluster - cross-platform-comparison/cross-platform-comparison.md
+    - Blog
+      - [ ] content/Pillar - auction-platforms/Cluster - cross-platform-comparison/Blog/which-auction-platform-is-best-for-finding-deals.md
+      - [ ] content/Pillar - auction-platforms/Cluster - cross-platform-comparison/Blog/what-is-the-difference-between-ebay-and-heritage-auctions.md
+      - [ ] content/Pillar - auction-platforms/Cluster - cross-platform-comparison/Blog/how-do-i-compare-auction-platforms-to-find-the-best-deals.md
+      - [ ] content/Pillar - auction-platforms/Cluster - cross-platform-comparison/Blog/which-auction-platform-has-the-lowest-fees.md
+
+#### Pillar - Collecting and Reselling
 - [x] content/Pillar - collecting-and-reselling/collecting-and-reselling.md
+  - Cluster - Collector Profit Optimization
+    - [x] content/Pillar - collecting-and-reselling/Cluster - collector-profit-optimization/collector-profit-optimization.md
+    - Blog
+      - [x] content/Pillar - collecting-and-reselling/Cluster - collector-profit-optimization/Blog/how-can-collectors-maximize-profit-at-auctions.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - collector-profit-optimization/Blog/what-strategies-help-collectors-profit-from-auctions.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - collector-profit-optimization/Blog/how-do-price-predictions-help-collectors-optimize-profit.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - collector-profit-optimization/Blog/what-is-the-difference-between-collecting-for-profit-vs-personal-collection.md
+  - Cluster - Reseller Inventory Management
+    - [ ] content/Pillar - collecting-and-reselling/Cluster - reseller-inventory-management/reseller-inventory-management.md
+    - Blog
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - reseller-inventory-management/Blog/how-do-i-manage-inventory-as-an-auction-reseller.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - reseller-inventory-management/Blog/what-inventory-management-tools-work-best-for-auction-resellers.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - reseller-inventory-management/Blog/how-do-i-organize-inventory-from-auction-purchases.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - reseller-inventory-management/Blog/what-inventory-tracking-methods-should-resellers-use.md
+  - Cluster - Market Trend Analysis
+    - [ ] content/Pillar - collecting-and-reselling/Cluster - market-trend-analysis/market-trend-analysis.md
+    - Blog
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - market-trend-analysis/Blog/how-do-i-analyze-market-trends-for-auction-items.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - market-trend-analysis/Blog/what-market-trends-should-collectors-watch-for.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - market-trend-analysis/Blog/how-do-i-identify-rising-trends-in-auction-markets.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - market-trend-analysis/Blog/when-should-i-buy-based-on-market-trend-analysis.md
+  - Cluster - Tax Reporting for Resellers
+    - [ ] content/Pillar - collecting-and-reselling/Cluster - tax-reporting-resellers/tax-reporting-resellers.md
+    - Blog
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - tax-reporting-resellers/Blog/what-tax-reporting-is-required-for-auction-resellers.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - tax-reporting-resellers/Blog/how-do-i-keep-records-for-auction-reseller-taxes.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - tax-reporting-resellers/Blog/what-deductions-can-auction-resellers-claim.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - tax-reporting-resellers/Blog/when-do-i-need-to-report-auction-sales-for-taxes.md
+  - Cluster - Profit Margin Tracking
+    - [ ] content/Pillar - collecting-and-reselling/Cluster - profit-margin-tracking/profit-margin-tracking.md
+    - Blog
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - profit-margin-tracking/Blog/how-do-i-track-profit-margins-for-auction-reselling.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - profit-margin-tracking/Blog/what-is-a-good-profit-margin-for-auction-reselling.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - profit-margin-tracking/Blog/how-do-i-calculate-roi-for-auction-purchases.md
+      - [ ] content/Pillar - collecting-and-reselling/Cluster - profit-margin-tracking/Blog/what-tools-help-track-profit-margins-for-resellers.md
+
+#### Pillar - Auction Market Intelligence
 - [x] content/Pillar - auction-market-intelligence/auction-market-intelligence.md
-
-### Subtopics
-- [x] content/Pillar - auction-price-prediction/Cluster - price-analysis-methods/price-analysis-methods.md
-- [x] content/Pillar - bidding-strategies/Cluster - timing-and-sniping-techniques/timing-and-sniping-techniques.md
-- [x] content/Pillar - auction-platforms/Cluster - ebay-auction-intelligence/ebay-auction-intelligence.md
-- [x] content/Pillar - collecting-and-reselling/Cluster - collector-profit-optimization/collector-profit-optimization.md
-- [x] content/Pillar - auction-market-intelligence/Cluster - market-data-analysis/market-data-analysis.md
-
-### PAA Posts
-- [x] content/Pillar - auction-price-prediction/Cluster - price-analysis-methods/Blog/how-does-auction-price-prediction-work.md
-- [x] content/Pillar - bidding-strategies/Cluster - timing-and-sniping-techniques/Blog/when-is-the-best-time-to-bid-in-an-auction.md
-- [x] content/Pillar - auction-platforms/Cluster - ebay-auction-intelligence/Blog/how-do-i-use-auction-intelligence-on-ebay.md
-- [x] content/Pillar - collecting-and-reselling/Cluster - collector-profit-optimization/Blog/how-can-collectors-maximize-profit-at-auctions.md
-- [x] content/Pillar - auction-market-intelligence/Cluster - market-data-analysis/Blog/what-is-auction-market-intelligence.md
+  - Cluster - Market Data Analysis
+    - [x] content/Pillar - auction-market-intelligence/Cluster - market-data-analysis/market-data-analysis.md
+    - Blog
+      - [x] content/Pillar - auction-market-intelligence/Cluster - market-data-analysis/Blog/what-is-auction-market-intelligence.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - market-data-analysis/Blog/how-do-i-analyze-auction-market-data-effectively.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - market-data-analysis/Blog/what-market-data-is-most-important-for-auction-analysis.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - market-data-analysis/Blog/how-does-market-data-analysis-improve-auction-bidding.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - market-data-analysis/Blog/what-tools-help-analyze-auction-market-data.md
+  - Cluster - Price Trend Forecasting
+    - [ ] content/Pillar - auction-market-intelligence/Cluster - price-trend-forecasting/price-trend-forecasting.md
+    - Blog
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - price-trend-forecasting/Blog/how-do-i-forecast-price-trends-in-auction-markets.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - price-trend-forecasting/Blog/what-factors-affect-price-trends-in-auction-markets.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - price-trend-forecasting/Blog/how-accurate-are-price-trend-forecasts-for-auctions.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - price-trend-forecasting/Blog/when-should-i-use-price-trend-forecasting-for-bidding.md
+  - Cluster - Underpriced Item Detection
+    - [ ] content/Pillar - auction-market-intelligence/Cluster - underpriced-item-detection/underpriced-item-detection.md
+    - Blog
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - underpriced-item-detection/Blog/how-do-i-find-underpriced-items-at-auctions.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - underpriced-item-detection/Blog/what-makes-an-auction-item-underpriced.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - underpriced-item-detection/Blog/how-do-i-identify-hidden-gems-at-auctions.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - underpriced-item-detection/Blog/what-tools-help-detect-underpriced-auction-items.md
+  - Cluster - Auction Alert Systems
+    - [ ] content/Pillar - auction-market-intelligence/Cluster - auction-alert-systems/auction-alert-systems.md
+    - Blog
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - auction-alert-systems/Blog/how-do-auction-alert-systems-work.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - auction-alert-systems/Blog/what-types-of-auction-alerts-should-i-set-up.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - auction-alert-systems/Blog/how-do-i-configure-auction-alerts-for-best-results.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - auction-alert-systems/Blog/what-are-the-best-auction-alert-systems-available.md
+  - Cluster - Competitive Intelligence
+    - [ ] content/Pillar - auction-market-intelligence/Cluster - competitive-intelligence/competitive-intelligence.md
+    - Blog
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - competitive-intelligence/Blog/what-is-competitive-intelligence-for-auction-bidding.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - competitive-intelligence/Blog/how-do-i-analyze-competitors-in-auction-bidding.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - competitive-intelligence/Blog/what-competitive-intelligence-tactics-work-best-for-auctions.md
+      - [ ] content/Pillar - auction-market-intelligence/Cluster - competitive-intelligence/Blog/how-does-competitive-intelligence-give-me-an-advantage.md

@@ -23,13 +23,13 @@ function getContentDirectory(): string {
   // This is the most reliable in Next.js/Vercel environments
   try {
     if (typeof import.meta !== 'undefined' && import.meta.url) {
-      // Handle both file:// URLs and regular paths
+      // Handle file:// URLs - need to convert to file path
       let currentFile = import.meta.url;
       if (currentFile.startsWith('file://')) {
         // Remove file:// protocol
-        currentFile = currentFile.replace('file://', '');
-        // On Windows, might have file:///C:/path, handle that
-        if (currentFile.startsWith('/') && process.platform === 'win32') {
+        currentFile = decodeURIComponent(currentFile.replace('file://', ''));
+        // Handle Windows paths (file:///C:/path)
+        if (currentFile.match(/^\/[A-Z]:\//)) {
           currentFile = currentFile.substring(1);
         }
       }
@@ -38,6 +38,12 @@ function getContentDirectory(): string {
       const possibleRoot = path.resolve(currentDir, '../../..');
       if (fs.existsSync(path.join(possibleRoot, 'package.json'))) {
         projectRoot = possibleRoot;
+      } else {
+        // Try one more level up (in case of build structure)
+        const altRoot = path.resolve(currentDir, '../../../..');
+        if (fs.existsSync(path.join(altRoot, 'package.json'))) {
+          projectRoot = altRoot;
+        }
       }
     }
   } catch (e) {
@@ -107,13 +113,29 @@ function getContentDirectory(): string {
   console.error(`[getContentDirectory] Tried path: ${testPath}`);
   console.error(`[getContentDirectory] Tried fallback: ${fallbackPath}`);
   
-  // Try to list what's actually in the project root
+  // Try to list what's actually in the project root and /var/task
   if (fs.existsSync(projectRoot)) {
     try {
       const rootContents = fs.readdirSync(projectRoot);
       console.error(`[getContentDirectory] Project root contents:`, rootContents);
     } catch (e) {
       console.error(`[getContentDirectory] Could not read project root:`, e);
+    }
+  }
+  
+  // Also check /var/task to see what's actually there
+  if (fs.existsSync('/var/task')) {
+    try {
+      const taskContents = fs.readdirSync('/var/task');
+      console.error(`[getContentDirectory] /var/task contents:`, taskContents);
+      // Check if SEO Strategy exists in /var/task
+      const seoStrategyPath = path.join('/var/task', 'SEO Strategy');
+      if (fs.existsSync(seoStrategyPath)) {
+        const seoContents = fs.readdirSync(seoStrategyPath);
+        console.error(`[getContentDirectory] /var/task/SEO Strategy contents:`, seoContents);
+      }
+    } catch (e) {
+      console.error(`[getContentDirectory] Could not read /var/task:`, e);
     }
   }
   

@@ -19,16 +19,32 @@ function getContentDirectory(): string {
   // Try multiple strategies for different build environments
   let projectRoot: string | null = null;
   
-  // Strategy 1: Check if process.cwd() is already the project root
-  if (fs.existsSync(path.join(process.cwd(), 'package.json'))) {
+  // Strategy 1: Use import.meta.url to get current file location (ES modules)
+  // This is the most reliable in Next.js/Vercel environments
+  try {
+    if (typeof import.meta !== 'undefined' && import.meta.url) {
+      const currentFile = import.meta.url.replace('file://', '');
+      const currentDir = path.dirname(currentFile);
+      // Go up from app/components/templates/content.ts to project root (3 levels up)
+      const possibleRoot = path.resolve(currentDir, '../../..');
+      if (fs.existsSync(path.join(possibleRoot, 'package.json'))) {
+        projectRoot = possibleRoot;
+      }
+    }
+  } catch (e) {
+    // import.meta not available, try other strategies
+  }
+  
+  // Strategy 2: Check if process.cwd() is already the project root
+  if (!projectRoot && fs.existsSync(path.join(process.cwd(), 'package.json'))) {
     projectRoot = process.cwd();
   }
   
-  // Strategy 2: In Vercel, process.cwd() might be /var or a build directory
+  // Strategy 3: In Vercel, process.cwd() might be /var/task or a build directory
   // Search upward for package.json to find the actual project root
   if (!projectRoot) {
     let currentPath = process.cwd();
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 15; i++) { // Increased search depth
       const packageJsonPath = path.join(currentPath, 'package.json');
       if (fs.existsSync(packageJsonPath)) {
         projectRoot = currentPath;
@@ -40,13 +56,19 @@ function getContentDirectory(): string {
     }
   }
   
-  // Strategy 3: Try __dirname approach (if available in module context)
-  // This works when the file is imported as a module
-  if (!projectRoot && typeof __dirname !== 'undefined') {
-    // Go up from app/components/templates/content.ts to project root
-    const possibleRoot = path.resolve(__dirname, '../../..');
-    if (fs.existsSync(path.join(possibleRoot, 'package.json'))) {
-      projectRoot = possibleRoot;
+  // Strategy 4: Try looking for .next directory (Next.js build indicator)
+  if (!projectRoot) {
+    let currentPath = process.cwd();
+    for (let i = 0; i < 15; i++) {
+      const nextDir = path.join(currentPath, '.next');
+      const packageJsonPath = path.join(currentPath, 'package.json');
+      if (fs.existsSync(nextDir) && fs.existsSync(packageJsonPath)) {
+        projectRoot = currentPath;
+        break;
+      }
+      const parentPath = path.resolve(currentPath, '..');
+      if (parentPath === currentPath) break;
+      currentPath = parentPath;
     }
   }
   
@@ -58,28 +80,32 @@ function getContentDirectory(): string {
   // Try the found project root
   const testPath = path.join(projectRoot, config.contentDirectory);
   if (fs.existsSync(testPath)) {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`[getContentDirectory] Found content directory at: ${testPath}`);
-    }
     return testPath;
   }
   
   // Fallback: try process.cwd() directly
   const fallbackPath = path.join(process.cwd(), config.contentDirectory);
   if (fs.existsSync(fallbackPath)) {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`[getContentDirectory] Found content directory at (fallback): ${fallbackPath}`);
-    }
     return fallbackPath;
   }
   
-  // Log error if not found
+  // Log error with all attempted paths
   console.error(`[getContentDirectory] Content directory not found!`);
   console.error(`[getContentDirectory] Config contentDirectory: ${config.contentDirectory}`);
-  console.error(`[getContentDirectory] Project root: ${projectRoot}`);
+  console.error(`[getContentDirectory] Project root found: ${projectRoot}`);
   console.error(`[getContentDirectory] process.cwd(): ${process.cwd()}`);
   console.error(`[getContentDirectory] Tried path: ${testPath}`);
   console.error(`[getContentDirectory] Tried fallback: ${fallbackPath}`);
+  
+  // Try to list what's actually in the project root
+  if (fs.existsSync(projectRoot)) {
+    try {
+      const rootContents = fs.readdirSync(projectRoot);
+      console.error(`[getContentDirectory] Project root contents:`, rootContents);
+    } catch (e) {
+      console.error(`[getContentDirectory] Could not read project root:`, e);
+    }
+  }
   
   // Last resort: return the expected path (will log warning if not found)
   return path.join(projectRoot, config.contentDirectory);

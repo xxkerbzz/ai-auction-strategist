@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'About BidSmart - Our Mission to Transform Auction Bidding',
   description: 'Learn about BidSmart\'s mission to transform auction bidding with AI-powered intelligence. Built by collectors and resellers, for collectors and resellers.',
-  canonical: 'https://bidsmart.com/about',
+  canonical: 'https://ai-auction-strategist.vercel.app/about',
 });
 
 export default function AboutPage() {
@@ -22,7 +22,7 @@ export default function AboutPage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'BidSmart',
-    url: 'https://bidsmart.com',
+    url: 'https://ai-auction-strategist.vercel.app',
     description: 'AI-powered auction intelligence platform for collectors and resellers',
   };
 

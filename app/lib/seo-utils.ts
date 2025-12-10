@@ -15,7 +15,7 @@ export function generateMetadata({
   ogImage,
   noindex = false,
 }: SEOProps): Metadata {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://bidsmart.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ai-auction-strategist.vercel.app';
   const fullTitle = title.includes('BidSmart') ? title : `${title} | BidSmart`;
   
   return {

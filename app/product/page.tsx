@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'BidSmart Product - AI Auction Intelligence Platform',
   description: 'Learn how BidSmart analyzes thousands of completed auctions to predict prices and provide custom bidding strategies. See how our AI auction intelligence works.',
-  canonical: 'https://bidsmart.com/product',
+  canonical: 'https://ai-auction-strategist.vercel.app/product',
 });
 
 export default function ProductPage() {

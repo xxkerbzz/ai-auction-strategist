@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'BidSmart Features - Complete Auction Intelligence',
   description: 'Discover all BidSmart features: instant price predictions, bidding strategies, multi-platform support, bulk analysis, inventory management, and more.',
-  canonical: 'https://bidsmart.com/features',
+  canonical: 'https://ai-auction-strategist.vercel.app/features',
 });
 
 export default function FeaturesPage() {

@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'BidSmart Pricing - Auction Intelligence Starting at $29/month',
   description: 'Simple, transparent pricing for BidSmart. $29/month for casual collectors, $99/month for professional resellers. Free trial available, cancel anytime.',
-  canonical: 'https://bidsmart.com/pricing',
+  canonical: 'https://ai-auction-strategist.vercel.app/pricing',
 });
 
 export default function PricingPage() {
@@ -25,7 +25,7 @@ export default function PricingPage() {
     price: '29',
     priceCurrency: 'USD',
     availability: 'https://schema.org/InStock',
-    url: 'https://bidsmart.com/pricing',
+    url: 'https://ai-auction-strategist.vercel.app/pricing',
   };
 
   return (

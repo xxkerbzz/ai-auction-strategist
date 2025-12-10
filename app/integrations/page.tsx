@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'BidSmart Integrations - Supported Auction Platforms',
   description: 'BidSmart works across eBay, Heritage Auctions, LiveAuctioneers, and other major auction platforms. See all supported platforms and integration details.',
-  canonical: 'https://bidsmart.com/integrations',
+  canonical: 'https://ai-auction-strategist.vercel.app/integrations',
 });
 
 export default function IntegrationsPage() {

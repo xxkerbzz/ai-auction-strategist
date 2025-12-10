@@ -8,7 +8,7 @@ import { generateMetadata as genMeta } from './lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'BidSmart - Stop Bidding Blind. Know What It\'s Really Worth.',
   description: 'Stop bidding blind. Know what it\'s really worth. AI-powered auction intelligence that predicts prices and suggests winning bidding strategies across eBay, Heritage Auctions, and LiveAuctioneers.',
-  canonical: 'https://bidsmart.com',
+  canonical: 'https://ai-auction-strategist.vercel.app',
 });
 
 export default function HomePage() {
@@ -16,8 +16,8 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'BidSmart',
-    url: 'https://bidsmart.com',
-    logo: 'https://bidsmart.com/logo.png',
+    url: 'https://ai-auction-strategist.vercel.app',
+    logo: 'https://ai-auction-strategist.vercel.app/logo.png',
     description: 'AI-powered auction intelligence platform that predicts auction prices and suggests winning bidding strategies for collectors and resellers.',
     sameAs: [],
   };
@@ -26,10 +26,10 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'BidSmart',
-    url: 'https://bidsmart.com',
+    url: 'https://ai-auction-strategist.vercel.app',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://bidsmart.com/search?q={search_term_string}',
+      target: 'https://ai-auction-strategist.vercel.app/search?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };

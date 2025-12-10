@@ -8,7 +8,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'BidSmart Privacy Policy - How We Protect Your Data',
   description: 'BidSmart privacy policy. Learn how we collect, use, and protect your data. Your auction data is secure and confidential.',
-  canonical: 'https://bidsmart.com/privacy',
+  canonical: 'https://ai-auction-strategist.vercel.app/privacy',
 });
 
 export default function PrivacyPage() {

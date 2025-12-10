@@ -8,7 +8,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'BidSmart Terms of Service - User Agreement',
   description: 'BidSmart terms of service and user agreement. Clear terms for using our auction intelligence platform.',
-  canonical: 'https://bidsmart.com/terms',
+  canonical: 'https://ai-auction-strategist.vercel.app/terms',
 });
 
 export default function TermsPage() {

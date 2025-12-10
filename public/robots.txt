@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bidsmart.com/sitemap.xml
+Sitemap: https://ai-auction-strategist.vercel.app/sitemap.xml

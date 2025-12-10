@@ -10,7 +10,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'BidSmart Resources - Auction Intelligence Guides',
   description: 'Browse comprehensive guides and articles about auction price prediction, bidding strategies, auction platforms, collecting, reselling, and market intelligence.',
-  canonical: 'https://bidsmart.com/resources',
+  canonical: 'https://ai-auction-strategist.vercel.app/resources',
 });
 
 export default async function ResourcesPage() {

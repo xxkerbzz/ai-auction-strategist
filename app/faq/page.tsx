@@ -9,7 +9,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'BidSmart FAQ - Frequently Asked Questions',
   description: 'Frequently asked questions about BidSmart: how it works, pricing, features, platform support, and more. Get answers to common questions.',
-  canonical: 'https://bidsmart.com/faq',
+  canonical: 'https://ai-auction-strategist.vercel.app/faq',
 });
 
 export default function FAQPage() {

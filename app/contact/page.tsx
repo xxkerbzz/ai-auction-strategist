@@ -8,7 +8,7 @@ import { generateMetadata as genMeta } from '../lib/seo-utils';
 export const metadata: Metadata = genMeta({
   title: 'Contact BidSmart - Get Help and Support',
   description: 'Contact BidSmart for support, sales inquiries, or questions. We\'re here to help you make smarter auction decisions.',
-  canonical: 'https://bidsmart.com/contact',
+  canonical: 'https://ai-auction-strategist.vercel.app/contact',
 });
 
 export default function ContactPage() {
